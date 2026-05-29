@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Musicoterapia</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="song-hero">
+      <div>
+        <div class="album-art">🎵</div>
+        <h1 style="font-family:Georgia,serif;margin:0">Cantar junto</h1>
+        <p style="margin:8px 0 0;opacity:.82">Musicas familiares em fonte grande</p>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" type="button">Favoritas</button>
+      <button class="tab" type="button">Sertanejo</button>
+      <button class="tab" type="button">Bossa Nova</button>
+      <button class="tab" type="button">Forro</button>
+    </div>
+
+    <section class="content-tight music-layout">
+      <div class="card" style="margin:0 0 14px;background:var(--amber-soft)">
+        <strong style="color:var(--amber)">Sessao guiada</strong>
+        <p class="muted" style="color:var(--amber)">Toque em avancar verso e cante junto. Engajamento ativo tende a reforcar memorias autobiograficas mais do que ouvir passivamente.</p>
+      </div>
+
+      <article class="music-card" style="padding:18px;margin-bottom:14px">
+        <div class="row-title" data-music-title>Tropeiro Velho</div>
+        <div class="row-subtitle" data-music-artist>Sertanejo classico</div>
+        <div class="progress" style="margin:16px 0 8px"><span data-music-progress style="width:0%"></span></div>
+        <div style="display:flex;justify-content:space-between" class="muted"><span data-music-current>0:00</span><span data-music-duration>3:20</span></div>
+        <div class="actions" style="grid-template-columns:1fr 1fr">
+          <button class="btn secondary" type="button" data-music-prev>Anterior</button>
+          <button class="btn" type="button" data-music-play>▶ Tocar</button>
+          <button class="btn secondary" type="button" data-music-next>Proxima</button>
+          <button class="btn" type="button" data-sing-start>Avancar verso</button>
+        </div>
+      </article>
+
+      <section class="card" style="margin:0 0 14px" data-lyrics>
+        <div class="section-title" style="padding:0 0 12px">Letra grande</div>
+        <p class="lyrics" data-line>Eu sou o tropeiro velho</p>
+        <p class="lyrics" data-line style="display:none">Pelas estradas eu vou</p>
+        <p class="lyrics" data-line style="display:none">Levando lembrancas boas</p>
+        <p class="lyrics" data-line style="display:none">Do tempo que ficou</p>
+      </section>
+
+      <div class="section-title" style="padding-left:0">Playlist</div>
+      <button class="list-row" style="width:100%;border:0;text-align:left" data-song-index="0" type="button">
+        <span class="tile-icon" style="background:var(--violet)">🎵</span>
+        <span style="flex:1"><span class="row-title">Tropeiro Velho</span><br><span class="row-subtitle">Sertanejo classico</span></span>
+        <span class="badge violet">guiada</span>
+      </button>
+      <button class="list-row" style="width:100%;border:0;text-align:left" data-song-index="1" type="button">
+        <span class="tile-icon" style="background:var(--green)">🎵</span>
+        <span style="flex:1"><span class="row-title">Garota de Ipanema</span><br><span class="row-subtitle">Bossa Nova</span></span>
+        <span class="badge green">calma</span>
+      </button>
+      <button class="list-row" style="width:100%;border:0;text-align:left" data-song-index="2" type="button">
+        <span class="tile-icon" style="background:var(--amber)">🎶</span>
+        <span style="flex:1"><span class="row-title">Asa Branca</span><br><span class="row-subtitle">Forro classico</span></span>
+        <span class="badge amber">alegre</span>
+      </button>
+      <button class="list-row" style="width:100%;border:0;text-align:left" data-song-index="3" type="button">
+        <span class="tile-icon" style="background:var(--red)">❤️</span>
+        <span style="flex:1"><span class="row-title">Carinhoso</span><br><span class="row-subtitle">Choro classico</span></span>
+        <span class="badge red">afetiva</span>
+      </button>
+    </section>
+
+    <nav class="bottom-nav" data-patient-nav data-active="inicio"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

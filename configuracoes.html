@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Configurações</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('inicio-paciente.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Configurações</div>
+      </div>
+      <span style="width:40px"></span>
+    </header>
+
+    <section class="content" style="background:var(--page)">
+      <div class="section-title">Acessibilidade</div>
+      <div class="setting-row" data-toggle-setting="textoGrande">
+        <div class="setting-icon" style="background:var(--violet)">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4"/></svg>
+        </div>
+        <span class="row-title" style="flex:1">Texto grande</span>
+        <button class="toggle-switch off" type="button" aria-label="Texto grande"></button>
+      </div>
+      <div class="setting-row" data-toggle-setting="altoContraste">
+        <div class="setting-icon" style="background:#e8580a">
+          <svg viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>
+        </div>
+        <span class="row-title" style="flex:1">Alto contraste</span>
+        <button class="toggle-switch off" type="button" aria-label="Alto contraste"></button>
+      </div>
+
+      <div class="section-title">Notificações</div>
+      <div class="setting-row" data-toggle-setting="lembretesMedicacao">
+        <div class="setting-icon" style="background:var(--green)">
+          <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+        </div>
+        <span class="row-title" style="flex:1">Lembretes de medicação</span>
+        <button class="toggle-switch" type="button" aria-label="Lembretes de medicação"></button>
+      </div>
+      <div class="setting-row" data-toggle-setting="lembretesMusica">
+        <div class="setting-icon" style="background:#7b2fbe">
+          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/></svg>
+        </div>
+        <span class="row-title" style="flex:1">Lembretes de música</span>
+        <button class="toggle-switch" type="button" aria-label="Lembretes de música"></button>
+      </div>
+
+      <div class="section-title">Conta</div>
+      <a class="setting-row" href="./boas-vindas.html">
+        <div class="setting-icon" style="background:var(--red)">
+          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/></svg>
+        </div>
+        <span class="row-title" style="flex:1;color:var(--red)">Sair</span>
+        <span>›</span>
+      </a>
+    </section>
+
+    <nav class="bottom-nav" data-patient-nav data-active="config"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

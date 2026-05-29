@@ -1,0 +1,105 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    overflow: auto; /* Allows scrolling when needed */
+    font-family: 'Inter', sans-serif; /* Sets the font for the entire body */
+}
+
+/* Header */
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #723ed9;
+    padding: 15px 0;
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 85%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #beb8b83b;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+    font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    .header {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        font-size: 13px;
+    }
+}
+
+/* Bloco */
+.bloco {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 30px; /* Reduced padding for smaller screens */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+button {
+    color: rgb(136, 136, 136);
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    margin-left: 90px;
+    border: 2px solid #c2c2c2;
+    cursor: pointer;
+    padding: 2%;
+}
+
+/* Input */
+input {
+    border-radius: 12px;
+    margin-bottom: 15px; /* Increased spacing between inputs */
+    border: 2px solid #c2c2c2;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: normal; /* Make font thinner */
+}
+
+    h5{
+        font-weight:bolder;
+        }

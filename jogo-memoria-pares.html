@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Memoria de pares</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('jogos.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Memoria de pares</div>
+        <div class="topbar-subtitle">Encontre os pares iguais</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </header>
+
+    <section class="content-tight">
+      <div class="card" style="margin:0 0 14px">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center">
+          <div>
+            <strong style="font-size:24px;color:var(--violet)" data-memory-pairs>0/8</strong>
+            <div class="muted">pares</div>
+          </div>
+          <div>
+            <strong style="font-size:24px;color:var(--amber)" data-memory-moves>0</strong>
+            <div class="muted">tentativas</div>
+          </div>
+          <div data-optional-timer hidden>
+            <strong style="font-size:24px;color:var(--green)">livre</strong>
+            <div class="muted">timer opcional</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-board memory-board" data-memory-board></div>
+
+      <div class="actions">
+        <button class="btn secondary" onclick="initMemoryGame()" type="button">Novo jogo</button>
+      </div>
+
+      <div class="card" style="margin:16px 0 0;background:var(--green-soft)">
+        <strong style="color:var(--green)">Por que ajuda</strong>
+        <p class="muted" style="color:var(--green)">Estimula memoria visual e associacao, sem pressao de tempo quando o cuidador mantem o timer desligado.</p>
+      </div>
+    </section>
+
+    <section class="finish-card" data-finish></section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

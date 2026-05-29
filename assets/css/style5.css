@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: auto; /* Permite rolagem quando necessário */
+  font-family: 'Inter', sans-serif; /* Define a fonte para o corpo todo */
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #723ed9;
+  padding: 15px 0;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  text-align: center;
+  height: 110px;
+  position: relative; /* Para posicionar a seta */
+}
+
+.back-link {
+  position: absolute;
+  left: 15px; /* Ajuste conforme necessário */
+  top: 50%;
+  transform: translateY(-50%);
+  color: white; /* Cor da seta */
+  text-decoration: none; /* Remove o sublinhado */
+  font-size: 24px; /* Tamanho da seta */
+}
+
+.search-bar {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 85%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #ece7e786;
+}
+
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Aumenta o espaço entre os itens */
+  padding: 20px;
+  width: 100%; /* Para garantir que fique responsivo */
+  max-width: 600px; /* Limita a largura máxima */
+  align-items: center;
+}
+
+.video-item {
+  background-color: #f2eeee;
+  padding: 15px;
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%; /* Para se adaptar ao contêiner */
+  max-width: 600px; /* Limita a largura máxima */
+  height: 80px; /* Altura fixa para todos os itens */
+  display: flex; /* Permite alinhar o texto corretamente */
+  align-items: center; /* Centraliza o texto verticalmente */
+  justify-content: center; /* Centraliza o texto horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efeito de transição */
+}
+
+.video-item:hover {
+  transform: translateY(-3px); /* Levanta o item ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra mais forte ao passar o mouse */
+}
+
+.fim {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #723ed9;
+  padding: 15px 0;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  text-align: center;
+  height: 110px;
+  margin-top: 140px;
+}

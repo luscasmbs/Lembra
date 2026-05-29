@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Cadastro do cuidador</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="form-page">
+    <div class="topbar" style="position:static;border-radius:0 0 18px 18px">
+      <button class="back-btn" onclick="goTo('boas-vindas.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Cadastro do cuidador</div>
+        <div class="topbar-subtitle">Preferencias clinicas e acompanhamento</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </div>
+
+    <section class="form-card">
+      <h1>Configurar cuidado</h1>
+      <p class="muted">Estas escolhas ajustam dificuldade, humor e timer para reduzir ansiedade.</p>
+
+      <form action="./connect/cadastro_cuidador.php" method="post" data-caregiver-form>
+        <div class="field">
+          <label for="nome_cuidador">Nome completo do cuidador</label>
+          <input id="nome_cuidador" name="nome_cuidador" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="email_cuidador">E-mail</label>
+          <input id="email_cuidador" name="email_cuidador" type="email" placeholder="voce@email.com" required>
+        </div>
+
+        <div class="field">
+          <label for="senha_cuidador">Senha</label>
+          <input id="senha_cuidador" name="senha_cuidador" type="password" required>
+        </div>
+
+        <div class="field">
+          <label for="cpf_paciente">CPF do paciente vinculado</label>
+          <input id="cpf_paciente" name="cpf_paciente" type="text" inputmode="numeric" required>
+        </div>
+
+        <div class="field">
+          <label for="estagio">Estagio cognitivo observado</label>
+          <select id="estagio" name="estagio">
+            <option value="moderado" selected>Moderado: interface simplificada</option>
+            <option value="leve">Leve: mais opcoes de acompanhamento</option>
+          </select>
+        </div>
+
+        <div class="card" style="margin:16px 0 0">
+          <div class="row-title">Timer dos jogos</div>
+          <p class="muted">Por padrao ele fica oculto. Ative somente se a contagem ajudar, em vez de aumentar ansiedade.</p>
+          <label class="toggle-option" style="display:flex;align-items:center;gap:10px;margin-top:12px">
+            <input type="checkbox" name="timer_jogos" style="width:20px;height:20px">
+            Mostrar contagem regressiva
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Salvar configuracao</button>
+          <a class="btn secondary" href="./painel-cuidador.html">Abrir painel do cuidador</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

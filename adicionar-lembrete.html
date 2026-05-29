@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Adicionar lembrete</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="form-page">
+    <div class="topbar" style="position:static;border-radius:0 0 18px 18px">
+      <button class="back-btn" onclick="goTo('lembretes.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Adicionar lembrete</div>
+        <div class="topbar-subtitle">Rotina simples e clara</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </div>
+
+    <form class="form-card" data-reminder-form>
+      <h1>Novo lembrete</h1>
+      <div class="field">
+        <label for="lembrete">O que lembraro</label>
+        <input id="lembrete" name="lembrete" type="text" placeholder="Ex: Tomar remedio" required>
+      </div>
+      <div class="field">
+        <label for="hora">Horario</label>
+        <input id="hora" name="hora" type="time" required>
+      </div>
+      <div class="field">
+        <label for="tipo">Tipo</label>
+        <select id="tipo" name="tipo">
+          <option>Medicacao</option>
+          <option>Atividade</option>
+          <option>Alimentacao</option>
+          <option>Exercicio</option>
+        </select>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit">Salvar lembrete</button>
+        <a class="btn secondary" href="./lembretes.html">Ver lembretes</a>
+      </div>
+    </form>
+
+    <section style="margin-top:18px" data-reminders></section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

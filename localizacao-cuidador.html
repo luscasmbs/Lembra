@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Localização</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/cuidador.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('painel-cuidador.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Localização em tempo real</div>
+        <div class="topbar-subtitle"><span data-patient-name>Maria Luiza</span> · <span id="locStatus">aguardando</span></div>
+      </div>
+      <span style="width:40px"></span>
+    </header>
+
+    <section class="content">
+      <div class="map-stub">
+        <div class="map-pin" aria-hidden="true"></div>
+      </div>
+      <div style="padding:14px 16px">
+        <div class="card" style="display:flex;align-items:center;gap:10px;margin-bottom:12px;background:var(--green-soft)">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--green)"></span>
+          <div>
+            <div class="row-title" id="locAddress">Em casa — zona segura</div>
+            <div class="row-subtitle" id="locCoords">Toque em atualizar para usar GPS</div>
+          </div>
+        </div>
+        <button class="btn" id="locateBtn" type="button">Atualizar localização</button>
+      </div>
+    </section>
+
+    <nav class="bottom-nav care-bottom-nav" data-care-nav data-active="localizacao"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+  <script>
+    document.getElementById("locateBtn").addEventListener("click", () => {
+      const coords = document.getElementById("locCoords");
+      const status = document.getElementById("locStatus");
+      if (!navigator.geolocation) {
+        coords.textContent = "Geolocalização indisponível neste dispositivo";
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          coords.textContent = `${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)}`;
+          status.textContent = "agora";
+          syncEvent("localizacao", { lat: pos.coords.latitude, lng: pos.coords.longitude });
+        },
+        () => { coords.textContent = "Permissão negada ou indisponível"; }
+      );
+    });
+  </script>
+</body>
+</html>

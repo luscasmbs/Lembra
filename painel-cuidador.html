@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Painel do cuidador</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/cuidador.css">
+</head>
+<body data-reminder-limit="4" data-care-dashboard>
+  <main class="app-shell">
+    <header class="care-hero">
+      <div class="hero-row">
+        <div>
+          <div class="hero-kicker">Bem-vindo de volta,</div>
+          <h1>Acompanhe <span data-patient-name>seu paciente</span></h1>
+          <a class="patient-chip" href="./dados-paciente-cuidador.html" style="text-decoration:none;color:#fff" data-patient-chip hidden>
+            🟢 <span data-patient-chip-text>Paciente vinculado</span>
+          </a>
+          <p class="muted" data-care-empty-patient style="margin-top:12px;color:rgba(255,255,255,.85);font-size:13px">
+            Nenhum paciente vinculado. Cadastre um paciente para começar o acompanhamento.
+          </p>
+        </div>
+        <button class="avatar" onclick="goTo('cadastro-cuidador.html')" type="button">C</button>
+      </div>
+    </header>
+
+    <section class="care-grid" data-care-stats>
+      <div class="stat-card">
+        <span class="tile-icon" style="background:var(--green)">💊</span>
+        <strong data-stat-remedios>0/0</strong>
+        <span>remédios hoje</span>
+      </div>
+      <div class="stat-card">
+        <span class="tile-icon" style="background:var(--violet)">🎮</span>
+        <strong data-stat-jogos>0</strong>
+        <span>jogos feitos</span>
+      </div>
+      <div class="stat-card">
+        <span class="tile-icon" style="background:#7b2fbe">🎵</span>
+        <strong data-stat-musica>0 min</strong>
+        <span>música hoje</span>
+      </div>
+      <div class="stat-card">
+        <span class="tile-icon" style="background:var(--amber)">🙂</span>
+        <strong data-stat-humor>—</strong>
+        <span>humor atual</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Alertas recentes</div>
+      <div data-care-alerts></div>
+    </section>
+
+    <section>
+      <div class="section-title">Lembretes do paciente</div>
+      <div data-reminders></div>
+    </section>
+
+    <section class="card">
+      <div class="row-title">Preferências clínicas</div>
+      <p class="muted">Timer de jogos oculto por padrão. Humor com 5 opções no app do paciente.</p>
+      <div class="actions">
+        <a class="btn secondary" href="./cadastro-cuidador.html">Editar preferências</a>
+        <a class="btn secondary" href="./contatos-emergencia.html">Contatos de emergência</a>
+      </div>
+    </section>
+
+    <nav class="bottom-nav care-bottom-nav" data-care-nav data-active="inicio"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Cadastro do paciente</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="form-page">
+    <div class="topbar" style="position:static;border-radius:0 0 18px 18px">
+      <button class="back-btn" onclick="goTo('boas-vindas.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Cadastro do paciente</div>
+        <div class="topbar-subtitle">Perfil para cuidado e rotina</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </div>
+
+    <section class="form-card">
+      <h1>Dados essenciais</h1>
+      <p class="muted">Campos claros ajudam o cuidador a adaptar lembretes, jogos e musicoterapia.</p>
+
+      <form action="./connect/cadastro.php" method="post" data-patient-form>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" placeholder="Ex: Maria Luiza Ferreira" required>
+        </div>
+
+        <div class="field">
+          <label for="cpf">CPF</label>
+          <input id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" required>
+        </div>
+
+        <div class="field">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="field">
+          <label for="tipo">Tipo sanguineo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="" disabled selected>Selecione</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>Nao sei</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="medico">Condicao cognitiva</label>
+          <input id="medico" name="medico" type="text" placeholder="Ex: Alzheimer moderado" required>
+        </div>
+
+        <div class="field">
+          <label for="restricao">Restricoes e observacoes</label>
+          <textarea id="restricao" name="restricao" placeholder="Alergias, alimentacao, cuidados importantes" required></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Salvar e entrar</button>
+          <a class="btn secondary" href="./inicio-paciente.html">Entrar sem banco local</a>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

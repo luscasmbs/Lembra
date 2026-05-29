@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Entrar como paciente</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <button class="back-btn" onclick="goTo('boas-vindas.html')" type="button" style="align-self:flex-start;margin-bottom:24px">&lt; Voltar</button>
+    <h1 style="font-family:var(--font-serif);font-size:26px;margin:0 0 8px">Entrar como paciente</h1>
+    <p class="muted" style="margin-bottom:32px">Use os dados cadastrados pelo seu cuidador</p>
+
+    <form class="form-card" style="box-shadow:none;padding:0" data-login-paciente>
+      <div class="field">
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Ex: Maria Luiza" required>
+      </div>
+      <div class="field">
+        <label for="senha">Senha simplificada</label>
+        <input id="senha" name="senha" type="password" placeholder="••••" required>
+      </div>
+      <div class="actions">
+        <button class="btn" type="submit">Entrar</button>
+        <a class="btn secondary" href="./cadastro-paciente.html">Primeiro acesso? Cadastre-se</a>
+      </div>
+      <p class="muted" style="text-align:center;margin-top:18px;font-size:13px">
+        Não consegue entrar? <strong style="color:var(--violet)">Chame seu cuidador</strong>
+      </p>
+    </form>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

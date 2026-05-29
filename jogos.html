@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Jogos cognitivos</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/jogos.css">
+</head>
+<body class="games-page">
+  <main class="app-shell">
+    <header class="games-hero">
+      <div class="hero-row">
+        <div>
+          <div class="hero-kicker">Jogos cognitivos</div>
+          <h1>Exercite sua mente 🧠</h1>
+        </div>
+        <button class="avatar" onclick="goTo('inicio-paciente.html')" type="button">&lt;</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div style="font-size:28px;font-weight:900" data-points>0</div>
+          <div style="font-size:12px;font-weight:800;opacity:.78">pts hoje</div>
+        </div>
+        <div class="hero-stat warm">
+          <div style="font-size:28px;font-weight:900" data-streak>0</div>
+          <div style="font-size:12px;font-weight:800;opacity:.78">dias seguidos</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="tabs" aria-label="Filtros de jogos">
+      <button class="tab active" data-filter="Todos" type="button">Todos</button>
+      <button class="tab" data-filter="Memoria" type="button">Memória</button>
+      <button class="tab" data-filter="Atencao" type="button">Atenção</button>
+      <button class="tab" data-filter="Linguagem" type="button">Linguagem</button>
+      <button class="tab" data-filter="Orientacao" type="button">Orientação</button>
+    </div>
+
+    <div class="games-scroll">
+      <section class="content-tight game-list">
+        <article class="game-card" data-category="Memoria">
+          <a href="./jogo-memoria-pares.html">
+            <div class="game-thumb">🃏</div>
+            <div class="game-body">
+              <h3>Memória de pares</h3>
+              <p>Encontre os pares de cartas idênticas. Treina memória visual e atenção concentrada.</p>
+              <div class="badges"><span class="badge violet">fácil</span><span class="badge amber">5 min</span></div>
+              <div class="game-evidence"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Evidência: melhora memória episódica (ACTIVE Trial)</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Atencao">
+          <a href="./jogo-sequencia-luminosa.html">
+            <div class="game-thumb" style="background:var(--amber-soft)">🌈</div>
+            <div class="game-body">
+              <h3>Sequência luminosa</h3>
+              <p>Repita a sequência de cores na ordem certa. Treina memória de trabalho e atenção dividida.</p>
+              <div class="badges"><span class="badge amber">médio</span><span class="badge violet">7 min</span></div>
+              <div class="game-evidence"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Evidência: treino adaptativo e reserva cognitiva</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Linguagem">
+          <a href="./jogo-palavra-imagem.html">
+            <div class="game-thumb" style="background:var(--green-soft)">🖼️</div>
+            <div class="game-body">
+              <h3>Palavra e imagem</h3>
+              <p>Una a palavra à imagem correspondente. Treina linguagem e memória semântica.</p>
+              <div class="badges"><span class="badge green">adaptado</span><span class="badge amber">6 min</span></div>
+              <div class="game-evidence"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Evidência: estimulação semântica e fluência verbal</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Orientacao">
+          <a href="./jogo-orientacao-tempo.html">
+            <div class="game-thumb" style="background:var(--red-soft)">📅</div>
+            <div class="game-body">
+              <h3>Orientação no tempo</h3>
+              <p>Perguntas sobre dia, mês e rotina. Reforça orientação temporal.</p>
+              <div class="badges"><span class="badge red">diário</span><span class="badge violet">3 min</span></div>
+              <div class="game-evidence"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Evidência: jogos sérios melhoram orientação (JMIR)</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Memoria">
+          <a href="./jogo-quebracabeca.html">
+            <div class="game-thumb">🧩</div>
+            <div class="game-body">
+              <h3>Quebra-cabeça</h3>
+              <p>Monte uma imagem familiar com peças. Fortalece raciocínio espacial.</p>
+              <div class="badges"><span class="badge amber">médio</span><span class="badge violet">10 min</span></div>
+              <div class="game-evidence"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Evidência: proteção contra declínio cognitivo</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Linguagem">
+          <a href="./jogo-fluencia-verbal.html">
+            <div class="game-thumb" style="background:var(--green-soft)">🗣️</div>
+            <div class="game-body">
+              <h3>Fluência verbal</h3>
+              <p>Nomeie palavras por letra e categoria. Acesso lexical e fluência semântica.</p>
+              <div class="badges"><span class="badge green">linguagem</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="game-card" data-category="Atencao">
+          <a href="./jogo-numeros-simples.html">
+            <div class="game-thumb" style="background:var(--blue-soft)">🔢</div>
+            <div class="game-body">
+              <h3>Números simples</h3>
+              <p>Sudoku visual com verificação e reforço positivo ao concluir.</p>
+              <div class="badges"><span class="badge violet">raciocínio</span></div>
+            </div>
+          </a>
+        </article>
+      </section>
+
+      <section class="finish-card" data-finish></section>
+    </div>
+
+    <nav class="bottom-nav" data-patient-nav data-active="jogos"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Palavra e imagem</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/jogos-interativos.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('jogos.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Palavra e imagem</div>
+        <div class="topbar-subtitle">Una palavra à imagem certa</div>
+      </div>
+      <span style="width:40px"></span>
+    </header>
+
+    <section class="content-tight" data-word-game>
+      <div class="game-intro" data-word-intro>
+        <div class="emoji">🖼️</div>
+        <h2>Pronto para começar?</h2>
+        <p class="muted">Toque em iniciar e escolha a palavra que combina com cada imagem.</p>
+        <button class="btn" data-word-start type="button">Iniciar jogo</button>
+      </div>
+
+      <div data-word-play hidden>
+        <div class="game-play-stats">
+          <div><strong data-word-score>0</strong><span class="muted">acertos</span></div>
+          <div><strong data-word-round>1</strong><span class="muted">de 6</span></div>
+        </div>
+        <div class="card" style="text-align:center;margin-bottom:14px">
+          <div style="font-size:56px" data-word-emoji>🍎</div>
+          <p class="muted" style="margin-top:8px">Qual palavra descreve esta imagem?</p>
+        </div>
+        <div class="word-match-grid" data-word-options></div>
+        <p class="muted" style="text-align:center;min-height:24px" data-word-feedback></p>
+      </div>
+    </section>
+
+    <section class="finish-card" data-finish></section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

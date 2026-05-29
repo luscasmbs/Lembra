@@ -1,0 +1,353 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f5;
+    font-family: 'Inter', sans-serif;
+}
+
+.cartao {
+    width: 100%;
+    background-color: #723ed9;
+    color: white;
+    border-radius: 0 0 20px 20px; /* Apenas arredondar a parte inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil i {
+    font-size: 50px;
+    color: white;
+}
+
+.barraBusca {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.barraBusca input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #ffffff54;
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+    color: rgb(80, 22, 134);
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.linkIcone {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    width: 80px; /* Largura do link para incluir círculo */
+}
+
+.linkIcone .icone {
+    width: 70px; /* Diminuir o tamanho do círculo */
+    height: 70px; /* Diminuir o tamanho do círculo */
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Cor do círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 24px; /* Diminuir o tamanho do ícone */
+}
+
+.linkIcone p {
+    margin-top: 5px; /* Espaço entre ícone e texto */
+}
+
+.linkVerTodos {
+    display: block;
+    text-align: center;
+    color: #723ed9;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.lembretes, .tituloJogos, .tituloMusica {
+    text-align: center;
+    color: #723ed9;
+    font-size: 28px; /* Tamanho padrão */
+}
+
+#lembretesContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.bloco {
+    display: flex;
+    flex-direction: column;
+    background-color: #beb8b83b;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.211);
+}
+
+.bloco h3, .bloco h6 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.botao-remover {
+    background-color: #723ED9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-remover:hover {
+    background-color: #582eab;
+}
+
+.botao-remover:active {
+    background-color: #4812b4;
+    transform: scale(0.98);
+}
+
+/* Estilos para Últimos Jogos Jogados */
+.tituloJogos {
+    margin-top: 20px;
+    font-size: 28px; /* Tamanho padrão */
+}
+
+/* Estilos para a Última Música Ouvida */
+.musica {
+    max-width: 500px;
+    width: 100%;
+    background-color: #dbc9ef;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.musica img {
+    width: 100px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.musica h2 {
+    color: #D384FF;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.musica p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Remover a borda dos links */
+a, a:focus, a:active, a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .icones {
+        flex-direction: row; /* Mantenha os botões lado a lado */
+        justify-content: center;
+    }
+
+    .linkIcone {
+        margin: 5px; /* Ajuste o espaço entre os ícones */
+    }
+
+    .tituloLembretes, .tituloJogos {
+        font-size: 22px;
+    }
+
+    .bloco {
+        width: 100%;
+    }
+
+    .musica {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .musica img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloLembretes, .tituloJogos {
+        font-size: 18px;
+    }
+
+    .bloco {
+        width: 100%;
+    }
+}
+/* Estilos para Últimos Jogos Jogados */
+.tituloJogos {
+    margin-top: 20px;
+    font-size: 28px; /* Tamanho padrão */
+    text-align: center; /* Centraliza o título */
+}
+
+.quadradoJogos {
+    display: flex;
+    justify-content: center; /* Centraliza os jogos */
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto; /* Garante que fique centralizado */
+}
+
+.imagemJogo {
+    width: 60px; /* Diminuir o tamanho da imagem */
+    height: 60px; /* Diminuir o tamanho da imagem */
+    margin: 10px;
+    display: inline-block;
+}
+
+.imagemJogo img {
+    width: 100%; /* Ajusta a imagem para preencher o espaço */
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+}
+/* Estilos para Últimos Jogos Jogados */
+.tituloJogos {
+    margin-top: 20px;
+    font-size: 28px; /* Tamanho padrão */
+    text-align: center; /* Centraliza o título */
+}
+
+.quadradoJogos {
+    display: flex;
+    justify-content: center; /* Centraliza os jogos */
+    flex-wrap: wrap;
+    max-width: 90%; /* Ajuste a largura máxima para 90% */
+    margin: 20px auto; /* Garante que fique centralizado e espaçado */
+}
+
+.imagemJogo {
+    width: 70px; /* Tamanho da imagem ajustado */
+    height: 70px; /* Tamanho da imagem ajustado */
+    margin: 10px; /* Margem entre os jogos */
+    display: flex; /* Permite centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.imagemJogo img {
+    width: 100%; /* Ajusta a imagem para preencher o espaço */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .imagemJogo {
+        width: 60px; /* Reduz o tamanho em telas menores */
+        height: 60px; /* Reduz o tamanho em telas menores */
+    }
+
+    .tituloJogos {
+        font-size: 22px; /* Tamanho menor no mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagemJogo {
+        width: 50px; /* Ajuste adicional para telas pequenas */
+        height: 50px; /* Ajuste adicional para telas pequenas */
+    }
+
+    .tituloJogos {
+        font-size: 18px; /* Tamanho ainda menor no mobile */
+    }
+}
+.quadradoJogos {
+    display: flex;
+    justify-content: center; /* Centraliza os jogos */
+    flex-wrap: wrap; /* Permite que os jogos se ajustem em várias linhas */
+    margin: 20px auto; /* Centraliza e espaça */
+}
+
+.imagemJogo {
+    width: 70px; /* Ajuste o tamanho */
+    height: 70px; /* Ajuste o tamanho */
+    margin: 10px; /* Margem entre os jogos */
+    display: flex; /* Permite centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.imagemJogo img {
+    width: 100%; /* Ajusta a imagem para preencher o espaço */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.musica {
+    max-width: 500px; /* Largura máxima */
+    width: 90%; /* Largura responsiva */
+    background-color: #D384FF; /* Altera a cor de fundo */
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centraliza */
+}
+
+.musica h2, .musica p {
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Cor do texto */
+}
+

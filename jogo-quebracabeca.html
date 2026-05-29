@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Quebra-cabeça</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/jogos-interativos.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('jogos.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Quebra-cabeça</div>
+        <div class="topbar-subtitle">Monte a imagem familiar</div>
+      </div>
+      <span style="width:40px"></span>
+    </header>
+
+    <section class="content-tight" data-puzzle-game>
+      <div class="game-intro" data-puzzle-intro>
+        <div class="emoji">🧩</div>
+        <h2>Monte o quadro</h2>
+        <p class="muted">Toque nas peças ao lado do espaço vazio para movê-las.</p>
+        <button class="btn" data-puzzle-start type="button">Iniciar jogo</button>
+      </div>
+
+      <div data-puzzle-play hidden>
+        <div class="game-play-stats">
+          <div><strong data-puzzle-moves>0</strong><span class="muted">movimentos</span></div>
+        </div>
+        <div class="puzzle-grid" data-puzzle-board></div>
+        <div class="actions" style="margin-top:14px">
+          <button class="btn secondary" data-puzzle-reset type="button">Reiniciar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="finish-card" data-finish></section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

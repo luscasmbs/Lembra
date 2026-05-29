@@ -1,0 +1,13 @@
+/* Telas de gameplay */
+.game-play-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.game-play-stats strong {
+  display: block;
+  font-size: 22px;
+}

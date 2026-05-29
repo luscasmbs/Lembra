@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Lembretes</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('inicio-paciente.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Lembretes</div>
+        <div class="topbar-subtitle" data-today>Hoje</div>
+      </div>
+      <button class="back-btn" onclick="goTo('adicionar-lembrete.html')" type="button">+</button>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" type="button">Todos</button>
+      <button class="tab" type="button">Medicacao</button>
+      <button class="tab" type="button">Atividade</button>
+    </div>
+
+    <section class="content">
+      <div class="section-title">Rotina</div>
+      <div data-reminders></div>
+      <div class="actions" style="padding:16px">
+        <a class="btn" href="./adicionar-lembrete.html">Adicionar lembrete</a>
+        <button class="btn ghost" data-clear-reminders type="button">Limpar lista</button>
+      </div>
+    </section>
+
+    <nav class="bottom-nav" data-patient-nav data-active="lembretes"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

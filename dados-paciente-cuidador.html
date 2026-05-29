@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Dados do paciente</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/cuidador.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('painel-cuidador.html')" type="button">&lt;</button>
+      <div class="topbar-title">Dados do paciente</div>
+      <a class="back-btn" href="./cadastro-paciente.html" title="Editar">✎</a>
+    </header>
+
+    <section class="content" style="padding-bottom:24px">
+      <div class="profile-banner care">
+        <div class="profile-avatar-lg" data-patient-initials>ML</div>
+        <h2 style="margin:0;font-family:var(--font-serif)" data-patient-name>Maria Luiza</h2>
+        <p style="opacity:.8;margin:6px 0 0">Paciente · <span data-patient-condition>Alzheimer leve</span></p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-row"><span class="muted">Tipo sanguíneo</span><strong data-patient-type>A+</strong></div>
+        <div class="info-row"><span class="muted">Telefone</span><strong data-patient-phone>—</strong></div>
+        <div class="info-row"><span class="muted">Restrições</span><strong data-patient-notes style="max-width:55%;text-align:right">—</strong></div>
+      </div>
+
+      <div class="actions" style="padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <a class="btn secondary" href="./contatos-emergencia.html">Contatos</a>
+        <a class="btn secondary" href="./historico-cuidador.html">Histórico</a>
+      </div>
+    </section>
+
+    <nav class="bottom-nav care-bottom-nav" data-care-nav data-active="paciente"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

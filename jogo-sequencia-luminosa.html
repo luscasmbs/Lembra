@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Sequencia luminosa</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('jogos.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Sequencia luminosa</div>
+        <div class="topbar-subtitle">Observe e repita</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </header>
+
+    <section class="content-tight">
+      <div class="card" style="margin:0 0 14px">
+        <div class="row-title">Jogue com tranquilidade</div>
+        <p class="muted" data-simon-status>Nao precisa correr. Toque em iniciar quando estiver pronto.</p>
+        <p class="muted" data-optional-timer hidden>Timer habilitado pelo cuidador, mas este jogo pode ser pausado a qualquer momento.</p>
+      </div>
+
+      <div class="simon-board" data-simon-board>
+        <button class="simon-pad" data-color="red" style="background:#e74c3c" type="button" aria-label="Vermelho"></button>
+        <button class="simon-pad" data-color="green" style="background:#2ecc71" type="button" aria-label="Verde"></button>
+        <button class="simon-pad" data-color="blue" style="background:#3498db" type="button" aria-label="Azul"></button>
+        <button class="simon-pad" data-color="yellow" style="background:#f1c40f" type="button" aria-label="Amarelo"></button>
+      </div>
+
+      <button class="btn" type="button" data-simon-start>Iniciar jogo</button>
+    </section>
+    <section class="finish-card" data-finish></section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

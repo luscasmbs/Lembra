@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Início do paciente</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages/inicio-paciente.css">
+</head>
+<body data-reminder-limit="3">
+  <main class="app-shell">
+    <header class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="hero-kicker">Bom dia,</div>
+          <h1><span data-patient-name>Paciente</span> ☀️</h1>
+          <div class="date-pill" data-today>Hoje</div>
+        </div>
+        <button class="avatar" onclick="goTo('perfil-paciente.html')" type="button" data-patient-initials>—</button>
+      </div>
+    </header>
+
+    <section class="quick-grid" aria-label="Acessos principais">
+      <a class="quick-card" href="./lembretes.html">
+        <span class="tile-icon" style="background:var(--violet)" data-icon="bell"></span>
+        <strong>Lembretes</strong>
+        <span>de hoje</span>
+        <span class="badge red qc-badge-slot" data-home-reminder-badge style="margin-top:10px"></span>
+      </a>
+      <a class="quick-card" href="./jogos.html">
+        <span class="tile-icon" style="background:#e8580a" data-icon="star"></span>
+        <strong>Jogos</strong>
+        <span>cognitivos</span>
+        <span class="badge amber qc-badge-slot" data-home-streak-badge style="margin-top:10px"></span>
+      </a>
+      <a class="quick-card" href="./musica.html">
+        <span class="tile-icon" style="background:#7b2fbe" data-icon="music"></span>
+        <strong>Música</strong>
+        <span>terapêutica</span>
+        <span class="badge violet qc-badge-slot" data-last-song style="margin-top:10px"></span>
+      </a>
+      <a class="quick-card" href="./videos.html">
+        <span class="tile-icon" style="background:var(--red)" data-icon="video"></span>
+        <strong>Vídeos</strong>
+        <span>para você</span>
+        <span class="badge green qc-badge-slot" data-home-video-badge style="margin-top:10px"></span>
+      </a>
+    </section>
+
+    <section data-next-reminder-section hidden>
+      <div class="section-title">Próximo lembrete</div>
+      <div class="next-reminder" data-next-reminder></div>
+    </section>
+
+    <section class="card" data-mood>
+      <div class="row-title">Como você está?</div>
+      <p class="muted">Toque em um rosto para registrar seu humor agora.</p>
+      <div class="mood-options" style="grid-template-columns:repeat(5,minmax(0,1fr))">
+        <button class="mood-option" data-mood-value="otimo" type="button"><span class="face">😄</span><span>Ótimo</span></button>
+        <button class="mood-option" data-mood-value="bem" type="button"><span class="face">😊</span><span>Bem</span></button>
+        <button class="mood-option" data-mood-value="regular" type="button"><span class="face">😐</span><span>Regular</span></button>
+        <button class="mood-option" data-mood-value="triste" type="button"><span class="face">😔</span><span>Triste</span></button>
+        <button class="mood-option" data-mood-value="ansioso" type="button"><span class="face">😰</span><span>Ansioso</span></button>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Lembretes de hoje</div>
+      <div data-reminders></div>
+    </section>
+
+    <section class="card" data-weekly-progress>
+      <div style="display:flex;justify-content:space-between;gap:14px;align-items:center">
+        <div>
+          <div class="row-title">Progresso semanal</div>
+          <div class="row-subtitle" data-progress-label>Nenhuma atividade registrada ainda</div>
+        </div>
+        <strong style="font-size:24px;color:var(--violet)" data-progress-percent>0%</strong>
+      </div>
+      <div class="progress" style="margin-top:12px"><span data-progress-bar style="width:0%"></span></div>
+    </section>
+
+    <nav class="bottom-nav" data-patient-nav data-active="inicio"></nav>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

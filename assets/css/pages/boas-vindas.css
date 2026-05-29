@@ -1,0 +1,9 @@
+/* Boas-vindas e seleção de perfil */
+.welcome {
+  min-height: 100vh;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--card);
+}

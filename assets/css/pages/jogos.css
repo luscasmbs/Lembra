@@ -1,0 +1,45 @@
+/* Listagem de jogos — scroll e cards */
+body.games-page .app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body.games-page .games-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px;
+}
+
+body.games-page .game-list {
+  padding-top: 4px;
+  padding-bottom: 24px;
+}
+
+body.games-page .game-card {
+  margin: 0 16px 12px;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+}
+
+body.games-page .game-card a {
+  min-width: 0;
+  align-items: stretch;
+}
+
+body.games-page .game-body {
+  min-width: 0;
+  overflow: hidden;
+}
+
+body.games-page .game-body p,
+body.games-page .game-evidence span {
+  overflow-wrap: anywhere;
+}
+
+body.games-page .finish-card {
+  margin: 0 16px 16px;
+}

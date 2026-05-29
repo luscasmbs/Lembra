@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembra+ | Fluencia verbal</title>
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <button class="back-btn" onclick="goTo('jogos.html')" type="button">&lt;</button>
+      <div>
+        <div class="topbar-title">Fluencia verbal</div>
+        <div class="topbar-subtitle">Linguagem e memoria semantica</div>
+      </div>
+      <span class="brand-small">lembra+</span>
+    </header>
+
+    <section class="content-tight">
+      <div class="card" style="margin:0 0 14px">
+        <div class="badge green">novo jogo</div>
+        <h1 style="font-family:Georgia,serif;margin:12px 0 8px">Nomeie com calma</h1>
+        <p class="muted" id="fluencyPrompt" data-fluency-prompt>Carregando desafio...</p>
+      </div>
+
+      <div class="card" style="margin:0 0 14px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="row-title">Palavras lembradas</div>
+            <div class="row-subtitle">Nao ha contagem regressiva visivel.</div>
+          </div>
+          <strong style="font-size:32px;color:var(--violet)" data-fluency-score>0</strong>
+        </div>
+      </div>
+
+      <form class="form-card" style="margin:0" data-fluency-form>
+        <div class="field" style="margin-top:0">
+          <label for="palavra">Digite uma palavra</label>
+          <input id="palavra" name="palavra" type="text" autocomplete="off" placeholder="Ex: arara">
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">Adicionar palavra</button>
+          <button class="btn secondary" type="button" data-fluency-help>Dar uma pista</button>
+        </div>
+        <p class="muted" data-fluency-feedback style="min-height:22px"></p>
+      </form>
+
+      <div class="fluency-list" data-fluency-list aria-live="polite"></div>
+      <section class="finish-card" data-finish></section>
+    </section>
+  </main>
+  <script src="./assets/script/lembra-v2.js"></script>
+</body>
+</html>

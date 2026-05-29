@@ -1,0 +1,4 @@
+/* Splash / tela inicial */
+.splash .brand {
+  font-size: clamp(42px, 13vw, 64px);
+}

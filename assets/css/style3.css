@@ -1,0 +1,160 @@
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: auto; /* Permite rolagem quando necessário */
+  font-family: 'Inter', sans-serif; /* Define a fonte para o corpo todo */
+}
+
+.header {
+  display: flex; /* Adiciona flexbox */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Centraliza o conteúdo */
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-color: #723ed9;
+  padding: 15px 0;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: 80px;
+}
+
+.header .teste {
+  position: absolute; /* Faz a seta se posicionar no canto esquerdo */
+  left: 20px; /* Espaçamento à esquerda */
+  font-size: 24px; /* Tamanho da seta */
+  color: white; /* Cor da seta */
+}
+.teste{text-decoration: none;}
+
+.search-bar {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 85%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #beb8b83b;
+}
+
+.search-bar i {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666666;
+  font-size: 18px;
+}
+
+.botao-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #723ed9;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 20px; /* Ajusta a margem */
+}
+
+.botao-link:hover {
+  background-color: #723ed996;
+}
+
+.bloco {
+  padding: 20px;
+  margin: 10px;
+  background-color: #beb8b83b;
+  border-radius: 10px;
+  color: rgb(0, 0, 0); /* Cor do texto */
+  width: 90%;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.211); /* Adiciona sombra */
+}
+
+h6 {
+  font-weight: lighter;
+}
+
+h4 {
+  color: rgb(0, 0, 0); /* Cor do texto */
+  font-weight: bold;
+  text-align: center;
+}
+
+.blocolem {
+  padding: 20px;
+  margin: 20px;
+  background-color: #beb8b83b;
+  border-radius: 10px;
+  color: rgb(0, 0, 0); /* Cor do texto */
+  width: 60%;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.211); /* Adiciona sombra */
+}
+
+#lembre {
+  border-radius: 17px;
+  border: 2px solid #c2c2c2;
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #723ed9;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  Background-color: #723ed996;
+}
+
+
+.lembretes {
+  margin-top: 20px;
+  width: 300px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #e9ecef;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.bloco {
+  padding: 20px;
+  margin: 10px;
+  background-color: #beb8b83b;
+  border-radius: 10px;
+  color: rgb(0, 0, 0); /* Cor do texto */
+  width: 90%;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.211); /* Adiciona sombra */
+}

@@ -1,0 +1,13 @@
+/* Login paciente / cuidador */
+.auth-page {
+  min-height: 100vh;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--card);
+}
+
+.auth-page .btn-care {
+  background: #2e7d56;
+}
